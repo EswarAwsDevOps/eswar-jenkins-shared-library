@@ -1,5 +1,5 @@
 def call() {
-node {
+   java {
 
     stage('Compile') {
         echo 'Compile'
