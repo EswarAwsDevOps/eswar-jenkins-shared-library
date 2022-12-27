@@ -16,7 +16,6 @@ def compile(appType){
     }
 }
 
-
 def Code Quality(){
     stage('Code Quality'){
         echo 'Code Quality'
