@@ -1,13 +1,18 @@
 def call() {
-   java {
+   node {
 
     stage('Checkout Code') {
+        cleanWs()
         git branch: 'main', url: "${env.REPO_URL}"
     }
 
-            stage('Code Quality') {
-                echo 'Code Quality'
+            stage('Compile') {
+                echo 'Compile'
                     }
+           stage('Code Quality') {
+                echo 'Code Quality'
+
+       }
 
             stage('Test Cases') {
                 echo 'Test Cases'
