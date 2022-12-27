@@ -11,14 +11,14 @@ def compile(appType){
             sh 'mvn clean compile'
         }
  if(appType == "golang"){
-     sh 'go and init'
+     sh 'go mod init'
  }
     }
 }
 
 
 def Code Quality(){
-    stage('Code Qulaity'){
+    stage('Code Quality'){
         echo 'Code Quality'
     }
 }
