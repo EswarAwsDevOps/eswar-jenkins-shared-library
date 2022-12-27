@@ -1,8 +1,8 @@
 def call() {
    java {
 
-    stage('Compile') {
-        echo 'Compile'
+    stage('Checkout Code') {
+        git branch: 'main', url: "${env.REPO_URL}"
     }
 
             stage('Code Quality') {
