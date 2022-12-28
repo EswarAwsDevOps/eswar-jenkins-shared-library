@@ -10,9 +10,6 @@ def call() {
 //            common.testCases("java")
 //            if(env.TAG_NAME ==~ ".*") {
             common.release("java")
-            }
-        } catch (e) {
-//            common.mail()
         }
-//    }
-//}
+    } catch (e) {
+        }
