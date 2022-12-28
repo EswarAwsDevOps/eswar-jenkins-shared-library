@@ -24,7 +24,7 @@ def codeQuality() {
     }
 }
 def Release(){
-    stage('Publish A Release'){
+    stage('Publish A Release') {
         echo 'Publish A Release'
     }
 
