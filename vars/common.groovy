@@ -1,16 +1,16 @@
-def checkout(){
-    stage('Checkout Code'){
+def checkout() {
+    stage('Checkout Code') {
         cleanWs()
         git branch: 'main', url: "${env.REPO_URL}"
     }
 }
-def compile(appType){
+def compile(appType) {
 
-    stage('compile code'){
-        if(appType == "java"){
+    stage('compile code') {
+        if(appType == "java") {
             sh 'mvn clean compile'
         }
- if(appType == "golang"){
+ if(appType == "golang") {
      sh 'go mod init'
  }
     }
