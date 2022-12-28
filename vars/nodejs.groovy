@@ -2,7 +2,7 @@ def call() {
     node {
         try {
             common.checkout()
-            common.codeQuality()
+            common.CodeQuality()
             common.release()
         } catch (e) {
         }
