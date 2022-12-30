@@ -3,10 +3,10 @@ def call() {
 
         agent any
 
-
-        options {
-            ansiColor('xterm')
-        }
+//
+//        options {
+//            ansiColor('xterm')
+//        }
 
         stages {
 
