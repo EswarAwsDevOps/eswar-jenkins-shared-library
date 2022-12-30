@@ -1,4 +1,4 @@
-pipeline() {
+def call() {
     node {
         common.checkout()
     }
