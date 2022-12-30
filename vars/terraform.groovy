@@ -1,0 +1,5 @@
+pipeline() {
+    node {
+        common.checkout()
+    }
+}
