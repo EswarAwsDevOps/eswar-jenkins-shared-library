@@ -16,8 +16,7 @@ def call () {
                 ]),
         ])
 
-
-
+        ansiColor('xterm') {
         common.checkout()
 
         if ( ! ENVIRONMENT ) {
