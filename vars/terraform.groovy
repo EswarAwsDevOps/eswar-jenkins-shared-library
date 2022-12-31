@@ -1,30 +1,30 @@
 def call() {
     node {
 
-        properties([
-                parameters([
-                        [$class     : 'ChoiceParameterDefinition',
-                         choices    : '\ndev\nprod\n',
-                         name       : 'ENVIRONMENT',
-                         description: "Choose Environment"
-                        ],
-                        [$class     : 'ChoiceParameterDefinition',
-                         choices    : '\napply\ndestroy\n',
-                         name       : 'ACTION',
-                         description: "Choose Action"
-                        ],
-                ]),
-        ])
+//        properties([
+//                parameters([
+//                        [$class     : 'ChoiceParameterDefinition',
+//                         choices    : '\ndev\nprod\n',
+//                         name       : 'ENVIRONMENT',
+//                         description: "Choose Environment"
+//                        ],
+//                        [$class     : 'ChoiceParameterDefinition',
+//                         choices    : '\napply\ndestroy\n',
+//                         name       : 'ACTION',
+//                         description: "Choose Action"
+//                        ],
+//                ]),
+//        ])
 
         ansiColor('xterm') {
             common.checkout()
 
-            if (!ENVIRONMENT) {
-                env.ENVIRONMENT = "${env.ENVIRONMENT_DEFAULT}"
-            }
-
-            if (!ACTION) {
-                env.ACTION = "${env.ACTION_DEFAULT}"
+//            if (!ENVIRONMENT) {
+//                env.ENVIRONMENT = "${env.ENVIRONMENT_DEFAULT}"
+//            }
+//
+//            if (!ACTION) {
+//                env.ACTION = "${env.ACTION_DEFAULT}"
             }
 
             stage('Terraform init') {
