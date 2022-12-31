@@ -17,6 +17,9 @@ def call () {
         ])
 
 
+
+        common.checkout()
+
         stage('Terraform Init') {
             addShortText background: '#FFFF00', borderColor: '#FFFF00', color: '', link: '', text: "Env : ${ENVIRONMENT} | Action : ${ACTION}"
             sh '''
