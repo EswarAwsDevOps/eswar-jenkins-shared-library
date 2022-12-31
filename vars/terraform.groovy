@@ -41,9 +41,9 @@ def call () {
                 }
             }
 
-//        stage('Terraform Apply') {
-//         sh '''
-//            terraform apply -auto-approve -var-file=env/${ENVIRONMENT}.tfvars
-//         '''
-//                }
+        stage('Terraform Apply') {
+         sh '''
+            terraform apply -auto-approve -var-file=env/${ENVIRONMENT}.tfvars
+         '''
+                }
             }
