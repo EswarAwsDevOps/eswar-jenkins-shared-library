@@ -12,7 +12,7 @@ def call () {
             choice(name: 'ACTION', choices: ['', 'apply', 'destroy'], description: 'Pick Terraform Action')
         }
 
-        stagegs {
+        stages {
 
             stage('Terraform Init') {
                 steps {
