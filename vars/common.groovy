@@ -67,6 +67,7 @@ def release(appType) {
         }
         if (appType== "nginx") {
             sh '''
+               npm install
                zip -r ${COMPONENT}-${TAG_NAME}.zip *
                zip -d ${COMPONENT}-${TAG_NAME}.zip Jenkinsfile
             '''
