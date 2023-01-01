@@ -7,7 +7,8 @@ def call() {
             common.CodeQuality()
             common.testCases("java")
             if (env.TAG_NAME ==~ ".*") {
-            common.release("java")
+
+                common.release("java")
             }
         }
     }

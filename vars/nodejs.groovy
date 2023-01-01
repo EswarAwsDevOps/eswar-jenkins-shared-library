@@ -4,7 +4,8 @@ def call() {
             common.CodeQuality()
             common.testCases("nodejs")
             if (env.TAG_NAME ==~ ".*") {
-            common.release()
+
+                common.release()
             }
 
         }
