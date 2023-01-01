@@ -3,9 +3,12 @@ def call() {
         try {
             common.checkout()
             common.CodeQuality()
-            common.release()
-        } catch (e) {
-        }
+            common.testCases("nodejs")
+            if (env.TAG_NAME ==~ ".*") {
+                common.release()
+            } catch (e) {
+            }
 
+        }
     }
 }

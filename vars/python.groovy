@@ -2,7 +2,9 @@ def call() {
     node {
         common.checkout()
         common.CodeQuality()
-        common.release()
+        common.testCases("python")
+        if (env.TAG_NAME ==~ ".*") {
+            common.release()
+        }
     }
-
 }
