@@ -65,6 +65,13 @@ def release(appType) {
                zip -r ${COMPONENT}-${TAG_NAME}.zip *.ini *.py *.txt  
                '''
         }
+        if (appType== "nginx") {
+            sh '''
+               zip -r ${COMPONENT}-${TAG_NAME}.zip *
+               zip -d ${COMPONENT}-${TAG_NAME}.zip Jenkinsfile
+            '''
+        }
+
 
         sh 'curl -v -u admin:admin123 --upload-file ${COMPONENT}-${TAG_NAME}.zip http://172.31.6.229:8081/repository/${COMPONENT}/${COMPONENT}-${TAG_NAME}.zip\n'
     }
