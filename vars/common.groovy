@@ -32,7 +32,7 @@ def testCases(appType) {
         }
 
         if (appType == "python") {
-            sh 'python -m unittest *.py || true'
+            sh 'python3 -m unittest *.py || true'
         }
     }
 }
@@ -47,6 +47,6 @@ def CodeQuality() {
 
 def release() {
     stage('Publish A Release') {
-        sh 'echo Publish A Release'
+        echo 'Publish A Release'
     }
 }
