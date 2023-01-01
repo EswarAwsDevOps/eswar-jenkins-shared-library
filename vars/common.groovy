@@ -72,7 +72,7 @@ def release(appType) {
       '''
         }
 
-        sh 'curl -v -u admin:admin123 --upload-file ${COMPONENT}-${TAG_NAME}.zip http://172.31.6.229:8081/repository/${COMPONENT}/${COMPONENT}-${TAG_NAME}.zip\n'
+           sh 'curl -v -u admin:admin123 --upload-file ${COMPONENT}-${TAG_NAME}.zip http://172.31.6.229:8081/repository/${COMPONENT}/${COMPONENT}-${TAG_NAME}.zip'
     }
 
 }
