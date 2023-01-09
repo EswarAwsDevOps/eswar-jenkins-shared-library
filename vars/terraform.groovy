@@ -28,7 +28,7 @@ def call () {
             }
 
             stage('Terraform Init') {
-//                addShortText background: '#FFFF00', borderColor: '#FFFF00', color: '', link: '', text: "Env : ${ENVIRONMENT} | Action : ${ACTION}"
+                addShortText background: '#FFFF00', borderColor: '#FFFF00', color: '', link: '', text: "Env : ${ENVIRONMENT} | Action : ${ACTION}"
                 sh '''
               terraform init -backend-config=env/${ENVIRONMENT}-backend.tfvars
             '''
